@@ -1,0 +1,27 @@
+.preview-box{
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-box img{
+    height: 172px;
+}
+
+.preview-box-description{
+    position: absolute;
+    transition: 0.2s;
+    top: 172px;
+    height: 28px;
+    width: 100%;
+}
+.preview-box:hover .preview-box-description{
+    top:0;
+    height: 100%;
+}
+

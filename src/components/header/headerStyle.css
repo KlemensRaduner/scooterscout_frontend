@@ -1,0 +1,14 @@
+.logo {
+    height: 52px;
+}
+
+.navbar {
+    background-color: #00478c;
+}
+
+a.nav-link{
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1em !important;
+    font-weight: 600 !important;
+    color: white !important;
+}
