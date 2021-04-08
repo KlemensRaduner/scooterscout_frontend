@@ -12,7 +12,14 @@ const TopScooter = ({history}) => {
 
 
     return (
-        <div style={{display: 'flex', paddingBottom: 16, overflow: 'hidden'}}>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            paddingBottom: 16,
+            flexWrap: 'wrap',
+            height: 200,
+            overflow: "hidden"
+        }}>
             {topScooters.map(s => (
                 <div key={s.id} className={'preview-box'} onClick={() => handleClick(s.id)}>
                     <img src={`data:image/png;base64,${s.image}`}/>

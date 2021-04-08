@@ -5,13 +5,14 @@ import HomePage from "../pages/home";
 import LoginPage from "../pages/login";
 import SearchPage from "../pages/search";
 import ScooterPage from "../pages/scooter";
+import SellPage from "../pages/sell";
 
 const noaRouter = () => {
   return (
     <BrowserRouter>
       <Switch>
         <DecoratedRoute exact path="/search" component={SearchPage} />
-        <DecoratedRoute exact path="/sell" component={HomePage} />
+        <DecoratedRoute exact path="/sell" component={SellPage} />
         <DecoratedRoute exact path="/login" component={LoginPage} />
         <DecoratedRoute exact path="/scooter/:id" component={ScooterPage} />
         <DecoratedRoute exact path="/*" component={HomePage} />

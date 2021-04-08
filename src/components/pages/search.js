@@ -118,7 +118,7 @@ const SearchPage = ({history}) => {
                 </Col>
             </Row>
 
-            <Row style={{paddingTop: 16}}>
+            <Row style={{paddingTop: 16, paddingBottom: 16}}>
                 <Col md={{span: 10, offset: 1}}>
                     <hr/>
                     <div style={{fontWeight: 'bold', padding: 16}}>Top Scooters</div>

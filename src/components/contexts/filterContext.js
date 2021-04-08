@@ -17,27 +17,36 @@ function FilterContextProvider(props) {
 
 
     const getBrands = () => {
-        api.get("/brands").then(response => setBrands(response.data));
+        api.get("/brands").then(response => {
+            setBrands(response.data)
+            updateScooters();
+        });
     }
 
-    const selectBrand = (brandId) => {
+    const selectBrand = (brandId, update = true) => {
         const brand = brands.find(b => b.id === brandId);
         setSelectedBrand(brand);
         setModels(brand?.models || []);
         setSelectedModel(undefined)
-        updateScooters({price: selectedPrice, brand: brand?.name, model: selectedModel?.name});
+        if (update) {
+            updateScooters({price: selectedPrice, brand: brand?.name, model: undefined});
+
+        }
     }
 
-    const selectModel = (modelId) => {
-        const model = selectedBrand.models.find(m => m.id === modelId);
-        setSelectedModel(model || {id:'alle'});
-        updateScooters({price: selectedPrice, brand: selectedBrand?.name, model: model?.name});
+    const selectModel = (modelId, update = true) => {
+        const model = selectedBrand?.models.find(m => m.id === modelId);
+        setSelectedModel(model || {id: 'alle'});
+        if (update) {
+            updateScooters({price: selectedPrice, brand: selectedBrand?.name, model: model?.name});
+        }
     }
 
-    const selectPrice = (price) => {
+    const selectPrice = (price, update = true) => {
         setSelectedPrice(price);
-        console.log(price)
-        updateScooters({price, brand: selectedBrand?.name, model: selectedModel?.name});
+        if (update) {
+            updateScooters({price, brand: selectedBrand?.name, model: selectedModel?.name});
+        }
     }
 
     useEffect(() => {

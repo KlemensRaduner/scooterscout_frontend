@@ -50,10 +50,17 @@ const ScooterPage = ({history}) => {
                     <hr/>
                     <div style={{paddingBottom: 32}}>
                         <div style={{fontWeight: 'bold', fontSize: '1.2em'}}>Anbieter</div>
-                        <div>{scooter.user.alias}</div>
-                        <div>{scooter.user.street}</div>
-                        <div>{scooter.user.city}</div>
+                        <div>{scooter.user.firstName} {scooter.user.lastName}</div>
+                        <div>Email: {scooter.user.email}</div>
+                        <div>Telefon: {scooter.user.phone}</div>
                     </div>
+                    <div style={{paddingBottom: 32}}>
+                        <div style={{fontWeight: 'bold', fontSize: '1.2em'}}>Adresse</div>
+                        <div> {scooter.user.alias}</div>
+                        <div>{scooter.street}</div>
+                        <div>{scooter.city}</div>
+                    </div>
+
                 </Col>
             </Row>
         );
