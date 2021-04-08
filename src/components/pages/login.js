@@ -94,7 +94,7 @@ const LoginPage = ({history}) => {
                                 Neu registrieren
                             </div>
                             <div style={{paddingBottom: 16}}>
-                                Ich bin neu bei AutoScout24.
+                                Ich bin neu bei ScooterScout24.
                             </div>
                             {register ?
                                 <Form>
